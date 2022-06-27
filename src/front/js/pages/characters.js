@@ -13,7 +13,7 @@ export const Characters = () => {
     <div className="container text-light bg-dark">
       <div className="row">
         <div className="col-8 offset-2 d-flex flex-row flex-wrap"></div>
-        {store.characterss.map((characters) => {
+        {store.characters.map((characters) => {
           return <Card title={characters.name} />;
         })}
       </div>

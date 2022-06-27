@@ -11,12 +11,10 @@ export const Planets = () => {
 
   return (
     <div className="container text-light bg-dark">
-      <div className="row">
-        <div className="col-9 offset-2 d-flex flex-row flex-wrap justify-content-center">
-          {store.planets.map((planet) => {
-            return <Card title={planet.name} />;
-          })}
-        </div>
+      <div className="row dataRow">
+        {store.planets.map((planet) => {
+          return <Card title={planet.name} />;
+        })}
       </div>
     </div>
   );
