@@ -12,7 +12,7 @@ export const Planets = () => {
   return (
     <div className="container text-light bg-dark">
       <div className="row dataRow">
-        {store.planets.map((planet) => {
+        {store.planets((planet) => {
           return <Card title={planet.name} />;
         })}
       </div>

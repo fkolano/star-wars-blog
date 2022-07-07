@@ -1,7 +1,7 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
-.dataRow {
+.cardRow {
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
