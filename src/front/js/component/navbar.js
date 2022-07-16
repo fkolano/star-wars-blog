@@ -21,22 +21,16 @@ export const Navbar = () => {
               Favorites
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-
-              <li>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
+              {store.favorites.map((item, index) => {
+                <li key={index}>
+                  <Link to={item.link}>
+                    <a class="dropdown-item" href={store.favorites.url}>
+                      {store.favorites.name}
+                      Action
+                    </a>
+                  </Link>
+                </li>;
+              })}
             </ul>
           </li>
         </div>
