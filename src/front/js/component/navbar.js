@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
   return (
     <nav className="navbar navbar-light bg-light bg-white">
       <div className="container">
@@ -9,9 +11,9 @@ export const Navbar = () => {
           <span className="navbar-brand mb-0 h1">Star Wars</span>
         </Link>
         <div className="ml-auto">
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -20,16 +22,24 @@ export const Navbar = () => {
             >
               Favorites
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              {store.favorites.map((item, index) => {
-                <li key={index}>
-                  <Link to={item.link}>
-                    <a class="dropdown-item" href={store.favorites.url}>
-                      {store.favorites.name}
-                      Action
-                    </a>
-                  </Link>
-                </li>;
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              {store.favorites?.map((item, index) => {
+                return (
+                  <li className="d-flex" key={index}>
+                    <Link to="">
+                      <a className="dropdown-item" href="">
+                        {item.name}
+                      </a>
+                    </Link>
+
+                    <i
+                      onClick={() => {
+                        actions.deleteFavorites(index);
+                      }}
+                      className="fa-solid fa-trash-can"
+                    ></i>
+                  </li>
+                );
               })}
             </ul>
           </li>

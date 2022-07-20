@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
@@ -23,17 +24,18 @@ const Card = (props) => {
                   <h5 className="card-title"> {item.name} </h5>{" "}
                   <p className="card-text"> "Planet info should be here" </p>{" "}
                   <div className="navbar">
-                    <a href="#" className="btn btn-primary">
-                      {" "}
-                      "Learn more"{" "}
-                    </a>{" "}
-                    <a
-                      href="#"
+                    <Link to={"/" + props.title.toLowerCase() + "/" + index}>
+                      <button className="btn btn-primary">
+                        {" "}
+                        "Learn more"{" "}
+                      </button>{" "}
+                    </Link>
+                    <button
                       className="btn btn-primary"
                       onClick={() => props.addFavorites(item)}
                     >
                       <i className="fas fa-heart"></i>
-                    </a>
+                    </button>
                   </div>
                 </div>{" "}
               </div>{" "}

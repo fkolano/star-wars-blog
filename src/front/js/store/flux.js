@@ -11,6 +11,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         store.favorites.push(data);
         setStore(store);
       },
+
+      deleteFavorites: (index) => {
+        const store = getStore();
+        const newArray = store.favorites.filter((item, i) => i != index);
+        setStore({
+          favorites: newArray,
+        });
+      },
+
       // Use getActions to call a function within a fuction
 
       getPlanets: () => {
