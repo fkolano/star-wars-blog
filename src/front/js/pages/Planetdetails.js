@@ -13,6 +13,7 @@ export const PlanetDetails = (props) => {
     <div className="">
       <h1>{planet?.name}</h1>
       <div>{planet?.terrain}</div>
+      {console.log(store.planets)}
 
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">

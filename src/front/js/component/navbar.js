@@ -9,6 +9,11 @@ export const Navbar = () => {
       <div className="container">
         <Link to="/">
           <span className="navbar-brand mb-0 h1">Star Wars</span>
+          <img
+            src={
+              "https://icon-library.com/icon/star-wars-logo-icon-9.html.html"
+            }
+          />
         </Link>
         <div className="ml-auto">
           <li className="nav-item dropdown">
