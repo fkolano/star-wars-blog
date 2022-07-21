@@ -4,15 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 
-export const PlanetDetails = (props) => {
+export const VehicleDetails = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
-  const [planet, setPlanet] = useState(store.planets[params.index]);
+  const [vehicle, setVehicle] = useState(store.vehicles[params.index]);
 
   return (
+    //<div className="jumbotron">{store.characters[params.index].name}</div>;
     <div className="">
-      <h1>{planet?.name}</h1>
-      <div>{planet?.terrain}</div>
+      <h1>{vehicle?.name}</h1>
+      <div>{vehicle?.terrain}</div>
 
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
@@ -23,6 +24,6 @@ export const PlanetDetails = (props) => {
   );
 };
 
-PlanetDetails.propTypes = {
+VehicleDetails.propTypes = {
   match: PropTypes.object,
 };

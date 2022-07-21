@@ -24,6 +24,13 @@ export const Home = () => {
           addFavorites={actions.addFavorites}
         />
       )}
+      {store.vehicles.length > 0 && (
+        <Card
+          data={store.vehicles}
+          title="Vehicles"
+          addFavorites={actions.addFavorites}
+        />
+      )}
     </div>
   );
 };

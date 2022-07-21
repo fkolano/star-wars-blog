@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
       characters: [],
       favorites: [],
+      vehicles: [],
     },
     actions: {
       addFavorites: (data) => {
@@ -38,6 +39,16 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) =>
             setStore({
               characters: data.results,
+            })
+          );
+      },
+
+      getVehicles: () => {
+        fetch("https://swapi.dev/api/vehicles")
+          .then((resp) => resp.json())
+          .then((data) =>
+            setStore({
+              vehicles: data.results,
             })
           );
       },
