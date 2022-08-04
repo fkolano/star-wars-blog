@@ -5,17 +5,18 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-light bg-light bg-white">
-      <div className="container">
+    <nav className="navbar navbar-dark bg-dark bg-black p-0">
+      <div className="container w-100">
         <Link to="/">
-          <span className="navbar-brand mb-0 h1">Star Wars</span>
           <img
-            src="https://icon-library.com/icon/star-wars-logo-icon-9.html.html"
+            width="100px"
+            height="auto"
+            src="https://loodibee.com/wp-content/uploads/Star-Wars-transparent-logo.png"
             alt="star wars"
           />
         </Link>
         <div className="ml-auto">
-          <li className="nav-item dropdown">
+          <div className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
               href="#"
@@ -26,12 +27,12 @@ export const Navbar = () => {
             >
               Favorites
             </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul className="dropdown-menu p-0" aria-labelledby="navbarDropdown">
               {store.favorites?.map((item, index) => {
                 return (
                   <li className="d-flex" key={index}>
                     <Link to={item.url}>
-                      <a className="dropdown-item" href="">
+                      <a className="dropdown-item text-white" href="">
                         {item.name}
                       </a>
                     </Link>
@@ -46,7 +47,7 @@ export const Navbar = () => {
                 );
               })}
             </ul>
-          </li>
+          </div>
         </div>
       </div>
     </nav>

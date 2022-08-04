@@ -6,3 +6,16 @@
   overflow-x: scroll;
   overflow-y: hidden;
 }
+
+.detailPic {
+  /* max-width: 540px; */
+}
+
+* {
+  background: black;
+  color: white;
+}
+
+.homeWallpaper {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKbLtv2IfFx3hnnwhgtA65Qamr0PtM5CUJBw&usqp=CAU);
+}
