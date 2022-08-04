@@ -14,8 +14,14 @@ export const CharacterDetails = (props) => {
     <div className="">
       <h1>{character?.name}</h1>
       <div>{character?.terrain}</div>
-      <img src={"https://www.swapi.tech/api/people/1"} />
+      <div>Eye Color: {character?.eye_color}</div>
+      <div>Height: {character?.height}</div>
+      <div>Gender {character?.gender}</div>
+      <div>Skin Color: {character?.skin_color}</div>
+      <div>Mass: {character?.mass}kg</div>
+      <div>Birth Year: {character?.birth_year}</div>
 
+      {console.log(store.characters)}
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back Home

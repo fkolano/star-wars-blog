@@ -10,9 +10,8 @@ export const Navbar = () => {
         <Link to="/">
           <span className="navbar-brand mb-0 h1">Star Wars</span>
           <img
-            src={
-              "https://icon-library.com/icon/star-wars-logo-icon-9.html.html"
-            }
+            src="https://icon-library.com/icon/star-wars-logo-icon-9.html.html"
+            alt="star wars"
           />
         </Link>
         <div className="ml-auto">
@@ -31,7 +30,7 @@ export const Navbar = () => {
               {store.favorites?.map((item, index) => {
                 return (
                   <li className="d-flex" key={index}>
-                    <Link to="">
+                    <Link to={item.url}>
                       <a className="dropdown-item" href="">
                         {item.name}
                       </a>

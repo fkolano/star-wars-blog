@@ -13,7 +13,12 @@ export const VehicleDetails = (props) => {
     //<div className="jumbotron">{store.characters[params.index].name}</div>;
     <div className="">
       <h1>{vehicle?.name}</h1>
-      <div>{vehicle?.terrain}</div>
+
+      <div>Crew: {vehicle?.crew}</div>
+      <div>Max Atmosphering Speed: {vehicle?.max_atmosphering_speed}</div>
+      <div>Length {vehicle?.length}</div>
+      <div>Model: {vehicle?.model}</div>
+      <div>Passengers: {vehicle?.passengers}</div>
 
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">

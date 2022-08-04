@@ -12,7 +12,13 @@ export const PlanetDetails = (props) => {
   return (
     <div className="">
       <h1>{planet?.name}</h1>
-      <div>{planet?.terrain}</div>
+      <div>Terrain: {planet?.terrain}</div>
+      <div>Climate: {planet?.climate}</div>
+      <div>Orbital Period: {planet?.orbital_period}</div>
+      <div>Diameter: {planet?.diameter}</div>
+      <div>Population: {planet?.population}</div>
+      <div>Gravity: {planet?.gravity}</div>
+      <div>Rotation Period: {planet?.rotation_period}</div>
       {console.log(store.planets)}
 
       <Link to="/">
