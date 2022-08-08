@@ -44,7 +44,7 @@ const Card = (props) => {
                         })
                       }
                     >
-                      <i className="fas fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
                     </button>
                   </div>
                 </div>{" "}
