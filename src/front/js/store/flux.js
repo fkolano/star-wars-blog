@@ -27,7 +27,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch("https://swapi.dev/api/planets")
           .then((resp) => resp.json())
           .then((data) => {
-            console.log(data);
             setStore({ planets: data.results });
           });
       },
@@ -36,8 +35,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch("https://swapi.dev/api/people")
           .then((resp) => resp.json())
           .then((data) => {
-            console.log(data.results);
-
             setStore({
               characters: data.results,
             });
@@ -48,7 +45,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch("https://swapi.dev/api/vehicles")
           .then((resp) => resp.json())
           .then((data) => {
-            console.log(data.results);
             setStore({
               vehicles: data.results,
             });

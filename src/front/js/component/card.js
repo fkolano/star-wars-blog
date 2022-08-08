@@ -36,7 +36,7 @@ const Card = (props) => {
                       <button className="btn btn-primary"> Learn more </button>{" "}
                     </Link>
                     <button
-                      className="btn btn-primary"
+                      className="btn"
                       onClick={() =>
                         props.addFavorites({
                           name: item.name,
@@ -44,7 +44,7 @@ const Card = (props) => {
                         })
                       }
                     >
-                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-bookmark"></i>
                     </button>
                   </div>
                 </div>{" "}

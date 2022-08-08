@@ -54,7 +54,6 @@ export const CharacterDetails = (props) => {
         <div>Mass: {character?.mass}kg</div>
         <div>Birth Year: {character?.birth_year}</div>
 
-        {console.log(store.characters)}
         <Link to="/">
           <span className="btn btn-primary btn-lg" href="#" role="button">
             Back Home
